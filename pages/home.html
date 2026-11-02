@@ -1,0 +1,162 @@
+<section class="page-view active" data-page="home" id="page-home">
+  <section aria-labelledby="home-title" class="hero">
+    <div class="hero-content">
+      <p class="hero-brand">Farm2Home</p>
+      <h1 id="home-title">Fresh From the Farm, Straight to Your Home.</h1>
+      <p class="hero-copy">
+        Discover fresh agricultural products from local farmers and bring the
+        goodness of the farm directly to your home.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-orange" data-route="" href="#/products"
+          >Shop Fresh Products
+          <svg
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6"></path></svg
+        ></a>
+        <a class="button button-light" data-route="" href="#/become-farmer"
+          >Become a Farmer</a
+        >
+      </div>
+      <p class="hero-note">Grown with care in Andhra Pradesh</p>
+    </div>
+  </section>
+  <section aria-labelledby="categories-title" class="section container">
+    <div class="section-head-row reveal">
+      <div class="section-heading">
+        <span class="eyebrow">A good place to start</span>
+        <h2 id="categories-title">Shop by category</h2>
+        <p>
+          Everyday essentials and seasonal picks, gathered from farms near you.
+        </p>
+      </div>
+      <a class="text-link" data-route="" href="#/products"
+        >Explore all products
+        <svg
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.8"
+          viewbox="0 0 24 24"
+        >
+          <path d="M5 12h14M13 6l6 6-6 6"></path></svg
+      ></a>
+    </div>
+    <div class="category-grid reveal" id="category-grid"></div>
+  </section>
+  <section aria-labelledby="featured-title" class="section-tight container">
+    <div class="section-head-row reveal">
+      <div class="section-heading">
+        <span class="eyebrow">Picked for your kitchen</span>
+        <h2 id="featured-title">Fresh from our farmers</h2>
+        <p>
+          Harvested with care, priced transparently, and ready for your table.
+        </p>
+      </div>
+      <a class="text-link" data-route="" href="#/products"
+        >See the full harvest
+        <svg
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.8"
+          viewbox="0 0 24 24"
+        >
+          <path d="M5 12h14M13 6l6 6-6 6"></path></svg
+      ></a>
+    </div>
+    <div class="product-grid reveal" id="featured-products"></div>
+  </section>
+  <section aria-labelledby="how-title" class="section container">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Simple by design</span>
+      <h2 id="how-title">From a nearby farm to your front door</h2>
+      <p>A thoughtful way to find good food and know who grew it.</p>
+    </div>
+    <div class="steps-grid reveal">
+      <article class="step">
+        <span class="step-number">01</span>
+        <h3>Discover</h3>
+        <p>Browse fresh products from farms across Andhra Pradesh.</p>
+      </article>
+      <article class="step">
+        <span class="step-number">02</span>
+        <h3>Choose</h3>
+        <p>Check the harvest, growing method, and farmer details.</p>
+      </article>
+      <article class="step">
+        <span class="step-number">03</span>
+        <h3>Add to Cart</h3>
+        <p>Pick what you need and adjust quantities at any time.</p>
+      </article>
+      <article class="step">
+        <span class="step-number">04</span>
+        <h3>Checkout</h3>
+        <p>Place a simulated order and follow its delivery journey.</p>
+      </article>
+    </div>
+  </section>
+  <section aria-labelledby="why-title" class="section why-section">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow"
+          >Good for the kitchen, good for the community</span
+        >
+        <h2 id="why-title">A little more care in every basket</h2>
+        <p>
+          Farm2Home brings the details that make everyday food shopping feel
+          more connected.
+        </p>
+      </div>
+      <div class="benefit-grid reveal" id="benefit-grid"></div>
+    </div>
+  </section>
+  <section aria-labelledby="recommendation-title" class="section container">
+    <div class="recommendation-band reveal">
+      <div>
+        <span class="eyebrow">A simple place to begin</span>
+        <h2 id="recommendation-title">What are you looking for?</h2>
+        <p>
+          Choose a category and we will bring a few matching farm picks your
+          way.
+        </p>
+        <div class="recommendation-control">
+          <select
+            aria-label="Choose a product category"
+            id="recommendation-category"
+          >
+            <option>Vegetables</option>
+            <option>Fruits</option>
+            <option>Grains</option>
+            <option>Organic Products</option>
+            <option>Dairy</option>
+            <option>Spices</option>
+          </select>
+          <button
+            class="button button-small"
+            data-action="recommend"
+            type="button"
+          >
+            Show picks
+          </button>
+        </div>
+      </div>
+      <div
+        aria-live="polite"
+        class="recommendation-results"
+        id="recommendation-results"
+      ></div>
+    </div>
+  </section>
+</section>

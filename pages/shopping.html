@@ -1,0 +1,204 @@
+<!-- Shopping & Order Views -->
+<!-- Related route views are grouped here because their content is rendered by the application modules. -->
+
+<!-- Cart page -->
+<section class="page-view" data-page="cart" id="page-cart">
+  <div class="container cart-wrap" id="cart-content">
+    <noscript>
+      <p>
+        Your cart items are loaded dynamically. Please enable JavaScript to
+        continue.
+      </p>
+    </noscript>
+  </div>
+</section>
+
+<section class="page-view" data-page="favorites" id="page-favorites">
+  <div class="container page-heading">
+    <span class="eyebrow">Saved for another day</span>
+    <h1>Your favorite finds</h1>
+    <p>
+      Keep the products you love close. Favorites are saved in this browser.
+    </p>
+  </div>
+  <div class="container section-tight section-top-zero section-bottom-wide">
+    <div class="product-grid" id="favorites-grid"></div>
+  </div>
+</section>
+
+<section class="page-view" data-page="checkout" id="page-checkout">
+  <div class="container page-heading">
+    <span class="eyebrow">One last step</span>
+    <h1>Checkout</h1>
+    <p>
+      Share your delivery details. Payments are simulated for this academic
+      project.
+    </p>
+  </div>
+  <div class="container checkout-grid" id="checkout-content">
+    <form class="form-panel" id="checkout-form">
+      <h2>Delivery information</h2>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="checkout-name">Full name</label
+          ><input
+            autocomplete="name"
+            id="checkout-name"
+            maxlength="80"
+            name="name"
+            placeholder="Your full name"
+            required=""
+          />
+        </div>
+        <div class="form-field">
+          <label for="checkout-mobile">Mobile number</label
+          ><input
+            id="checkout-mobile"
+            inputmode="numeric"
+            name="mobile"
+            pattern="[6-9][0-9]{9}"
+            placeholder="10-digit mobile number"
+            required=""
+            title="Enter a valid 10-digit Indian mobile number"
+            type="tel"
+          />
+        </div>
+        <div class="form-field full">
+          <label for="checkout-email">Email address</label
+          ><input
+            autocomplete="email"
+            id="checkout-email"
+            name="email"
+            placeholder="you@example.com"
+            required=""
+            type="email"
+          />
+        </div>
+        <div class="form-field full">
+          <label for="checkout-address">Address</label
+          ><input
+            autocomplete="street-address"
+            id="checkout-address"
+            maxlength="160"
+            name="address"
+            placeholder="House number, street and landmark"
+            required=""
+          />
+        </div>
+        <div class="form-field">
+          <label for="checkout-area">Village / Area</label
+          ><input
+            id="checkout-area"
+            maxlength="60"
+            name="area"
+            placeholder="Village or neighbourhood"
+            required=""
+          />
+        </div>
+        <div class="form-field">
+          <label for="checkout-city">City</label
+          ><input
+            autocomplete="address-level2"
+            id="checkout-city"
+            maxlength="50"
+            name="city"
+            placeholder="City"
+            required=""
+          />
+        </div>
+        <div class="form-field">
+          <label for="checkout-state">State</label
+          ><select id="checkout-state" name="state" required="">
+            <option value="">Select state</option>
+            <option>Andhra Pradesh</option>
+            <option>Telangana</option>
+            <option>Karnataka</option>
+            <option>Tamil Nadu</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="checkout-pincode">Pincode</label
+          ><input
+            id="checkout-pincode"
+            inputmode="numeric"
+            name="pincode"
+            pattern="[0-9]{6}"
+            placeholder="6-digit pincode"
+            required=""
+            title="Enter a valid 6-digit pincode"
+          />
+        </div>
+      </div>
+      <h2 class="form-section-heading">Payment method</h2>
+      <div class="payment-options">
+        <label class="payment-choice"
+          ><input
+            checked=""
+            name="payment"
+            type="radio"
+            value="Cash on Delivery"
+          /><span
+            ><b>Cash on Delivery</b
+            ><small>Pay when your farm box arrives</small></span
+          ></label
+        >
+        <label class="payment-choice"
+          ><input name="payment" type="radio" value="UPI Demo" /><span
+            ><b>UPI Demo</b
+            ><small>Simulated payment, no transaction is made</small></span
+          ></label
+        >
+        <label class="payment-choice"
+          ><input name="payment" type="radio" value="Card Demo" /><span
+            ><b>Card Demo</b
+            ><small
+              >For demonstration only, no card data is collected</small
+            ></span
+          ></label
+        >
+      </div>
+      <button class="button button-block" type="submit">
+        Place demo order
+      </button>
+      <p class="form-note">
+        This is a frontend prototype. No real payment or delivery booking will
+        take place.
+      </p>
+    </form>
+    <aside class="order-summary" id="checkout-summary"></aside>
+  </div>
+</section>
+
+<section class="page-view" data-page="orders" id="page-orders">
+  <div class="container page-heading">
+    <span class="eyebrow">Your shopping history</span>
+    <h1>My Orders</h1>
+    <p>Review orders placed from this Farm2Home account.</p>
+  </div>
+  <div class="container section-tight" id="orders-content"></div>
+</section>
+
+<!-- Confirmation page -->
+<section class="page-view" data-page="confirmation" id="page-confirmation">
+  <div class="container confirmation-wrap" id="confirmation-content">
+    <noscript>
+      <p>
+        Order confirmation is loaded dynamically. Please enable JavaScript to
+        continue.
+      </p>
+    </noscript>
+  </div>
+</section>
+
+<!-- Tracking page -->
+<section class="page-view" data-page="tracking" id="page-tracking">
+  <div class="container tracking-wrap" id="tracking-content">
+    <noscript>
+      <p>
+        Order tracking information is loaded dynamically. Please enable
+        JavaScript to continue.
+      </p>
+    </noscript>
+  </div>
+</section>

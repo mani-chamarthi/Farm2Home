@@ -1,0 +1,34 @@
+<!-- Shared interactive overlays -->
+<div class="app-overlays" id="app-overlays">
+  <aside aria-live="polite" class="compare-bar" hidden id="compare-bar">
+    <div>
+      <strong>Compare products</strong>
+      <span id="compare-count">0 / 3 selected</span>
+    </div>
+    <div class="compare-bar-actions">
+      <button
+        class="button button-small"
+        data-enhance="compare-open"
+        type="button"
+      >
+        Compare
+      </button>
+      <button
+        class="button button-small button-soft"
+        data-enhance="compare-clear"
+        type="button"
+      >
+        Clear
+      </button>
+    </div>
+  </aside>
+
+  <div
+    aria-atomic="true"
+    aria-live="polite"
+    class="toast-region"
+    id="toast-region"
+  ></div>
+
+  <div class="modal-root" id="modal-root" aria-live="polite"></div>
+</div>

@@ -1,0 +1,91 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a aria-label="Farm2Home home" class="brand" data-route="" href="#/home">
+      <span aria-hidden="true" class="brand-mark"
+        ><svg
+          class="icon"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.8"
+          viewbox="0 0 24 24"
+        >
+          <path d="M12 20v-8"></path>
+          <path d="M12 13c-5 0-8-2.7-8-7 4.8 0 8 2.1 8 7Z"></path>
+          <path d="M12 16c0-4.8 3-7.5 8-7.5 0 4.8-3 7.5-8 7.5Z"></path></svg
+      ></span>
+      <span class="brand-name">Farm<span>2</span>Home</span>
+    </a>
+    <nav aria-label="Main navigation" class="primary-nav" id="primary-nav">
+      <a data-nav="home" data-route="" href="#/home">Home</a>
+      <a data-nav="products" data-route="" href="#/products">Products</a>
+      <a data-nav="farmers" data-route="" href="#/farmers">Farmers</a>
+      <a data-nav="favorites" data-route="" href="#/favorites">Favorites</a>
+      <a data-nav="cart" data-route="" href="#/cart">Cart</a>
+      <a data-nav="about" data-route="" href="#/about">About</a>
+      <a class="mobile-farmer-link" data-route="" href="#/become-farmer"
+        >Become a Farmer</a
+      >
+    </nav>
+    <div class="header-actions">
+      <a
+        aria-label="Shopping cart"
+        class="cart-link"
+        data-route=""
+        href="#/cart"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.8"
+          viewbox="0 0 24 24"
+        >
+          <path
+            d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.3a2 2 0 0 0 1.9-1.4L21 8H6"
+          ></path>
+          <circle cx="10" cy="20" r="1"></circle>
+          <circle cx="18" cy="20" r="1"></circle>
+        </svg>
+        <span>Cart</span><b class="cart-count" id="cart-count">0</b>
+      </a>
+      <button class="header-login" data-action="login" type="button">
+        Login
+      </button>
+      <button
+        aria-label="Switch to dark mode"
+        class="icon-button theme-toggle"
+        data-action="toggle-theme"
+        id="theme-toggle"
+        title="Toggle theme"
+        type="button"
+      ></button>
+      <a class="button header-farmer" data-route="" href="#/become-farmer"
+        >Become a Farmer</a
+      >
+    </div>
+    <button
+      aria-controls="primary-nav"
+      aria-expanded="false"
+      aria-label="Open navigation"
+      class="menu-toggle"
+      id="menu-toggle"
+      type="button"
+    >
+      <svg
+        class="icon"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-width="1.8"
+        viewbox="0 0 24 24"
+      >
+        <path d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+  </div>
+</header>

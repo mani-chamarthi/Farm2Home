@@ -1,0 +1,456 @@
+/* Footer, toast, modal */
+.site-footer {
+  padding: 55px 0 22px;
+  background: #15351f;
+  color: #f1f3e9;
+}
+
+[data-theme="dark"] .site-footer {
+  background: #101a13;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr .8fr .8fr .9fr;
+  gap: 42px;
+  padding-bottom: 37px;
+}
+
+.footer-brand .brand {
+  color: #fff;
+}
+
+.footer-brand .brand-mark {
+  background: #4b8958;
+}
+
+.footer-brand p {
+  max-width: 250px;
+  margin: 14px 0 0;
+  color: rgba(241, 243, 233, .68);
+  font-size: 12px;
+}
+
+.footer-col h3 {
+  margin: 3px 0 15px;
+  color: #e5c091;
+  font-size: 10px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.footer-col a {
+  display: block;
+  width: fit-content;
+  margin: 9px 0;
+  color: rgba(241, 243, 233, .74);
+  font-size: 11px;
+  transition: color .2s ease;
+}
+
+.footer-col a:hover {
+  color: #f0bd7f;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 19px;
+  border-top: 1px solid rgba(255, 255, 255, .16);
+  color: rgba(241, 243, 233, .57);
+  font-size: 10px;
+}
+
+.toast-region {
+  position: fixed;
+  z-index: 100;
+  top: 92px;
+  right: 22px;
+  display: grid;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  min-width: 250px;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: var(--shadow-hover);
+  font-size: 12px;
+  animation: toast-in .28s ease both;
+}
+
+.toast svg {
+  width: 17px;
+  height: 17px;
+  color: var(--green-700);
+}
+
+.toast.error svg {
+  color: var(--red);
+}
+
+.toast.toast-out {
+  animation: toast-out .3s ease forwards;
+}
+
+.modal-root:empty {
+  display: none;
+}
+
+.modal-root {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(8, 24, 13, .58);
+  backdrop-filter: blur(5px);
+  animation: fade-in .2s ease both;
+}
+
+.modal {
+  position: relative;
+  width: min(520px, 100%);
+  max-height: min(90vh, 760px);
+  overflow-y: auto;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 0 25px 90px rgba(0, 0, 0, .25);
+  animation: modal-rise .3s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.modal h2 {
+  margin: 0 38px 7px 0;
+  font-family: var(--font-display);
+  font-size: 27px;
+}
+
+.modal>p {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.modal-form {
+  display: grid;
+  gap: 13px;
+}
+
+.modal-form .button {
+  margin-top: 5px;
+}
+
+.modal .form-grid {
+  gap: 12px;
+}
+
+.modal .form-field label {
+  font-size: 10px;
+}
+
+.modal .form-field input,
+.modal .form-field select,
+.modal .form-field textarea {
+  min-height: 41px;
+}
+
+.modal .form-field textarea {
+  min-height: 75px;
+}
+
+.form-help {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+@keyframes page-in {
+  from {
+    opacity: .3;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes toast-out {
+  to {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+}
+
+@keyframes success-pop {
+  from {
+    opacity: 0;
+    transform: scale(.72);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Commerce enhancements */
+/* Upgrade layer: comparison, recent views and denser commerce UI */
+.compare-bar {
+    position: fixed;
+    z-index: 60;
+    right: 24px;
+    bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 14px 16px 14px 18px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--paper);
+    box-shadow: var(--shadow-hover)
+}
+
+.compare-bar[hidden] {
+    display: none
+}
+
+.compare-bar strong {
+    display: block;
+    font-size: 12px
+}
+
+.compare-bar span {
+    color: var(--muted);
+    font-size: 10px
+}
+
+.compare-bar-actions {
+    display: flex;
+    gap: 7px
+}
+
+.compare-modal {
+    width: min(1080px, calc(100vw - 32px));
+    max-height: 82vh;
+    overflow: auto;
+    padding: 26px
+}
+
+.compare-modal-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px
+}
+
+.compare-modal-head h2 {
+    margin: 8px 0 5px;
+    font-family: var(--font-display);
+    font-size: 32px
+}
+
+.compare-modal-head p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px
+}
+
+.compare-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px
+}
+
+.compare-card {
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--paper)
+}
+
+.compare-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px
+}
+
+.compare-card h3 {
+    margin: 13px 0;
+    font-family: var(--font-display);
+    font-size: 20px
+}
+
+.compare-card div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 0;
+    border-top: 1px solid var(--line);
+    font-size: 11px
+}
+
+.compare-card span {
+    color: var(--muted)
+}
+
+.compare-card strong {
+    text-align: right
+}
+
+.recent-enhancement {
+    border-top: 1px solid var(--line)
+}
+
+.recent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px
+}
+
+.recent-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper);
+    transition: .2s
+}
+
+.recent-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow)
+}
+
+.recent-card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    object-fit: cover
+}
+
+.recent-card strong,
+.recent-card span {
+    display: block
+}
+
+.recent-card strong {
+    font-family: var(--font-display);
+    font-size: 16px
+}
+
+.recent-card span {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 11px
+}
+
+.product-actions {
+    flex-wrap: wrap
+}
+
+@media(max-width:760px) {
+    .compare-bar {
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        justify-content: space-between;
+        gap: 10px
+    }
+
+    .compare-grid,
+    .recent-grid {
+        grid-template-columns: 1fr
+    }
+
+    .compare-card img {
+        height: 140px
+    }
+
+    .compare-modal {
+        padding: 18px
+    }
+}
+/* Authentication and account UI */
+.auth-modal { max-width: 520px; }
+.auth-message { margin-bottom: 1rem; }
+.password-field { display: flex; gap: .5rem; align-items: stretch; }
+.password-field input { flex: 1; }
+.password-toggle { border: 1px solid var(--border, #ddd); background: transparent; border-radius: .6rem; padding: 0 .8rem; cursor: pointer; }
+.auth-links { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: .75rem; }
+.auth-switch { margin-top: .75rem; }
+.account-actions { display: grid; gap: .7rem; margin-top: 1.2rem; }
+.order-history-grid { display: grid; gap: 1rem; }
+.order-history-card { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 1rem; padding: 1.2rem; border: 1px solid var(--border, #ddd); border-radius: 1rem; background: var(--surface, #fff); }
+.order-history-card > div { display: grid; gap: .25rem; }
+.order-history-card small, .order-history-card span { opacity: .72; }
+@media (max-width: 700px) {
+  .order-history-card { grid-template-columns: 1fr; }
+  .auth-links { flex-direction: column; }
+}

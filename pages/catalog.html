@@ -1,0 +1,147 @@
+<!-- Catalog & Product Views -->
+<!-- Related route views are grouped here because their content is rendered by the application modules. -->
+
+<section class="page-view" data-page="products" id="page-products">
+  <div class="container page-heading">
+    <span class="eyebrow">The local harvest</span>
+    <h1>Products grown with care</h1>
+    <p>
+      Search the harvest, compare growing methods, and meet the farmers behind
+      each listing.
+    </p>
+  </div>
+  <div class="container listing-layout">
+    <aside aria-label="Product filters" class="filter-panel">
+      <h2>
+        Refine your search
+        <svg
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.8"
+          viewbox="0 0 24 24"
+        >
+          <path d="M4 6h16M7 12h10m-7 6h4"></path>
+          <circle cx="8" cy="6" fill="currentColor" r="1.4"></circle>
+          <circle cx="15" cy="12" fill="currentColor" r="1.4"></circle>
+          <circle cx="12" cy="18" fill="currentColor" r="1.4"></circle>
+        </svg>
+      </h2>
+      <div class="filter-field">
+        <label for="filter-category">Category</label
+        ><select id="filter-category">
+          <option value="all">All categories</option>
+          <option>Vegetables</option>
+          <option>Fruits</option>
+          <option>Grains</option>
+          <option>Pulses</option>
+          <option>Spices</option>
+          <option>Dairy</option>
+          <option>Honey</option>
+          <option>Millets</option>
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="filter-location">Location</label
+        ><select id="filter-location">
+          <option value="all">All locations</option>
+          <option>Visakhapatnam</option>
+          <option>Vijayawada</option>
+          <option>Nellore</option>
+          <option>Tirupati</option>
+          <option>Chittoor</option>
+          <option>Kurnool</option>
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="filter-method">Farming method</label
+        ><select id="filter-method">
+          <option value="all">All methods</option>
+          <option>Organic Farming</option>
+          <option>Natural Farming</option>
+          <option>Conventional Farming</option>
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="filter-availability">Availability</label
+        ><select id="filter-availability">
+          <option value="all">All products</option>
+          <option value="fresh">Fresh</option>
+          <option value="limited">Limited Stock</option>
+          <option value="out">Out of Stock</option>
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="max-price">Maximum price</label>
+        <div class="price-range-row">
+          <span>Up to</span><strong id="max-price-label">₹400</strong>
+        </div>
+        <input
+          id="max-price"
+          max="400"
+          min="0"
+          step="10"
+          type="range"
+          value="400"
+        />
+      </div>
+      <div class="filter-field">
+        <label class="check-row" for="organic-only"
+          ><input id="organic-only" type="checkbox" /> Organic products
+          only</label
+        >
+      </div>
+      <button class="filter-reset" data-action="reset-filters" type="button">
+        Reset all filters
+      </button>
+    </aside>
+    <div class="listing-content">
+      <div class="listing-toolbar">
+        <label class="listing-search"
+          ><svg
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="1.8"
+            viewbox="0 0 24 24"
+          >
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 4 4"></path></svg
+          ><input
+            aria-label="Search products, farmers or locations"
+            autocomplete="off"
+            id="product-search"
+            placeholder="Search product, farmer or location"
+            type="search"
+        /></label>
+        <label class="sort-control" for="product-sort"
+          >Sort by
+          <select id="product-sort">
+            <option value="popular">Popular</option>
+            <option value="newest">Newest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Rating</option>
+          </select></label
+        >
+      </div>
+      <p aria-live="polite" class="result-count" id="product-result-count"></p>
+      <div class="product-grid listing-products" id="product-list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Details page -->
+<section class="page-view" data-page="details" id="page-details">
+  <div class="container detail-wrap" id="product-detail-content">
+    <noscript>
+      <p>
+        Product details are loaded dynamically. Please enable JavaScript to
+        continue.
+      </p>
+    </noscript>
+  </div>
+</section>

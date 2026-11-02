@@ -1,0 +1,175 @@
+<!-- Account & Farmer Views -->
+<!-- Related route views are grouped here because their content is rendered by the application modules. -->
+
+<!-- Dashboard page -->
+<section class="page-view" data-page="dashboard" id="page-dashboard">
+  <div class="container dashboard-wrap" id="dashboard-content">
+    <noscript>
+      <p>
+        Dashboard data is loaded dynamically. Please enable JavaScript to
+        continue.
+      </p>
+    </noscript>
+  </div>
+</section>
+
+<section class="page-view" data-page="become-farmer" id="page-become-farmer">
+  <div class="container page-heading">
+    <span class="eyebrow">Grow with us</span>
+    <h1>Bring your harvest closer</h1>
+    <p>Introduce your farm to local customers and tell them what you grow.</p>
+  </div>
+  <div class="container registration-wrap">
+    <aside class="registration-story">
+      <div>
+        <span class="eyebrow">A fairer connection</span>
+        <h2>Your farm has a story worth sharing.</h2>
+        <p>
+          Farm2Home is a student-built marketplace concept that gives local
+          growers a simple place to present their produce and farming practices.
+        </p>
+      </div>
+      <img
+        alt="Farmers sorting freshly harvested leafy greens"
+        src="https://images.pexels.com/photos/20527467/pexels-photo-20527467.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1000"
+      />
+    </aside>
+    <div class="form-panel">
+      <div
+        class="success-message checkout-hidden"
+        id="farmer-success"
+        role="status"
+      >
+        <svg
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+        >
+          <path d="m5 12 4 4L19 6"></path></svg
+        ><span
+          >Your farmer registration has been submitted successfully. It is saved
+          in this browser for the demo.</span
+        >
+      </div>
+      <form id="farmer-registration-form">
+        <h2>Farmer registration</h2>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="farmer-name">Farmer name</label
+            ><input
+              id="farmer-name"
+              maxlength="80"
+              name="name"
+              placeholder="Your full name"
+              required=""
+            />
+          </div>
+          <div class="form-field">
+            <label for="farmer-mobile">Mobile number</label
+            ><input
+              id="farmer-mobile"
+              inputmode="numeric"
+              name="mobile"
+              pattern="[6-9][0-9]{9}"
+              placeholder="10-digit mobile number"
+              required=""
+              type="tel"
+            />
+          </div>
+          <div class="form-field full">
+            <label for="farmer-email">Email address</label
+            ><input
+              id="farmer-email"
+              name="email"
+              placeholder="you@example.com"
+              required=""
+              type="email"
+            />
+          </div>
+          <div class="form-field">
+            <label for="farmer-village">Village</label
+            ><input
+              id="farmer-village"
+              maxlength="60"
+              name="village"
+              placeholder="Village name"
+              required=""
+            />
+          </div>
+          <div class="form-field">
+            <label for="farmer-district">District</label
+            ><select id="farmer-district" name="district" required="">
+              <option value="">Select district</option>
+              <option>Visakhapatnam</option>
+              <option>Vijayawada</option>
+              <option>Nellore</option>
+              <option>Tirupati</option>
+              <option>Chittoor</option>
+              <option>Kurnool</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="farmer-state">State</label
+            ><select id="farmer-state" name="state" required="">
+              <option value="">Select state</option>
+              <option>Andhra Pradesh</option>
+              <option>Telangana</option>
+              <option>Karnataka</option>
+              <option>Tamil Nadu</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="farm-name">Farm name</label
+            ><input
+              id="farm-name"
+              maxlength="80"
+              name="farmName"
+              placeholder="Name of your farm"
+              required=""
+            />
+          </div>
+          <div class="form-field">
+            <label for="farm-size">Farm size</label
+            ><input
+              id="farm-size"
+              maxlength="40"
+              name="farmSize"
+              placeholder="e.g. 3 acres"
+              required=""
+            />
+          </div>
+          <div class="form-field full">
+            <label for="products-grown">Products grown</label
+            ><input
+              id="products-grown"
+              maxlength="140"
+              name="productsGrown"
+              placeholder="Tomatoes, rice, mangoes..."
+              required=""
+            />
+          </div>
+          <div class="form-field full">
+            <label for="farmer-method">Farming method</label
+            ><select id="farmer-method" name="farmingMethod" required="">
+              <option value="">Select a method</option>
+              <option>Organic Farming</option>
+              <option>Natural Farming</option>
+              <option>Conventional Farming</option>
+            </select>
+          </div>
+        </div>
+        <button class="button button-block registration-submit" type="submit">
+          Register as a Farmer
+        </button>
+        <p class="form-note">
+          Your information stays in this browser. This demo does not send it to
+          a server.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
